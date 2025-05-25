@@ -5,8 +5,6 @@ import { BadRequestError, validateRequest } from '@tj-gildedpass/common';
 
 
 import { User } from '../models/user';
-//import { BadRequestError } from '../errors/bad-request-error';
-//import { validateRequest } from '../middlewares/validate-request';
 
 const router = express.Router();
 
