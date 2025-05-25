@@ -1,2 +1,7 @@
 # skaffold binary
 skaffold
+
+common/.git
+
+*/build
+*/node_modules
