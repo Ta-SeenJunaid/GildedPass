@@ -17,8 +17,6 @@ it('returns a status code which is not 401 for authorized/signed in user', async
     .post('/api/tickets')
     .set('Cookie', global.setTestSessionCookie())
     .send({});
-  console.log(response.status);
-  console.log(global.setTestSessionCookie());
   expect(response.status).not.toEqual(401);
 });
 
