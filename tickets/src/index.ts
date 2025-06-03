@@ -13,7 +13,7 @@ const start = async () => {
   try {
     await natsWrapper.connect(
       'gildedpass',
-      'HtriIesawdfgdtesting',
+      'ticketsClient',
       'http://nats-srv:4222'
     );
 
