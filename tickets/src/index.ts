@@ -29,7 +29,7 @@ const start = async () => {
   }
 
   try {
-    await mongoose.connect('mongodb://tickets-mongo-srv:27017/tickets');
+    await mongoose.connect(process.env.MONGO_URI);
     console.log('Mongodb connected successfully!!!!!!!!!');
   } catch (err) {
     console.error(err);
