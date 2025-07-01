@@ -1,5 +1,15 @@
 import { OrderCreatedListener } from './events/listeners/order-created-listener';
 import { natsWrapper } from './nats-wrapper';
+// Importing the expiration queue to register the job processor with Bull.
+//
+// Even though we don't directly use anything from this file here,
+// the `expirationQueue.process(...)` inside it must be executed at startup
+// so Bull knows how to handle delayed jobs when they're ready.
+//
+// Without this import, the job handler would never be registered,
+// and queued jobs would sit idle in Redis.
+import './queues/expiration-queue';
+
 
 const start = async () => {
   if (!process.env.NATS_CLIENT_ID) {
