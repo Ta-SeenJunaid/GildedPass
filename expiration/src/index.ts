@@ -8,8 +8,7 @@ import { natsWrapper } from './nats-wrapper';
 //
 // Without this import, the job handler would never be registered,
 // and queued jobs would sit idle in Redis.
-import './queues/expiration-queue';
-
+// import './queues/expiration-queue';
 
 const start = async () => {
   if (!process.env.NATS_CLIENT_ID) {
