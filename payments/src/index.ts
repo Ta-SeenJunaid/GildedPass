@@ -25,9 +25,6 @@ const start = async () => {
     throw new Error('STRIPE_KEY must be defined!!!!');
   }
 
-  console.log('JWT!!!!!!!!!!!!!!!!!: ', process.env.JWT_KEY);
-  console.log('Stripe !!!!!!!!!!!!!!!!!: ', process.env.STRIPE_KEY);
-
   try {
     await natsWrapper.connect(
       process.env.NATS_CLUSTER_ID,
