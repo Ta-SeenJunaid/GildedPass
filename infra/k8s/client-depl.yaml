@@ -18,8 +18,8 @@ spec:
           env:
             - name: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
               valueFrom:
-                secretKeyRef:
-                  name: stripe-pk
+                configMapKeyRef:
+                  name: client-config
                   key: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 ---
 apiVersion: v1
