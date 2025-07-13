@@ -4,9 +4,15 @@ import { loadStripe } from '@stripe/stripe-js';
 import buildClient from '../api/build-client';
 import Header from '../components/header';
 
-const stripePromise = loadStripe(
-  'pk_test_51RhCH7PuKVx1Uxkqmk9Wfs8jKcNxmoiYW7zrRN5eDNFCgtD5yKMptHgyG60RQ8dMenPX5xCq8UNn3WRM32E0WtdP00VhIFGkvW'
-);
+const stripePublicKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
+
+if (!stripePublicKey) {
+  throw new Error(
+    'Missing Stripe publishable key. Set NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY in your environment.'
+  );
+}
+
+const stripePromise = loadStripe(stripePublicKey);
 
 const AppComponent = ({ Component, pageProps, currentUser }) => {
   return (

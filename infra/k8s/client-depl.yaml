@@ -15,6 +15,12 @@ spec:
       containers:
         - name: client
           image: taseenjunaid/client
+          env:
+            - name: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: stripe-pk
+                  key: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 ---
 apiVersion: v1
 kind: Service
