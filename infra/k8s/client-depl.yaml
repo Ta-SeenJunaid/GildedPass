@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: taseenjunaid/client
+          image: taseenjunaid/gp-client
           env:
             - name: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
               valueFrom:

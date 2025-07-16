@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+// A code comment to trigger CI/CD pipeline
+
 const LandingPage = ({ currentUser, tickets }) => {
   const ticketList = tickets.map((ticket) => {
     return (

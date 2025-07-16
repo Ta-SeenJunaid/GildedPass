@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: expiration
-          image: taseenjunaid/expiration
+          image: taseenjunaid/gp-expiration
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
@@ -26,4 +26,3 @@ spec:
               value: gildedpass
             - name: REDIS_HOST
               value: expiration-redis-srv
-
