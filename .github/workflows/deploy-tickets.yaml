@@ -18,3 +18,8 @@ jobs:
           DOCKER_PAT: ${{ secrets.DOCKER_PAT }}
       - run: cd tickets && docker build -t taseenjunaid/gp-tickets .
       - run: docker push taseenjunaid/gp-tickets
+      - uses: digitalocean/action-doctl@v4
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - run: doctl kubernetes cluster kubeconfig save gildedpass
+      - run: kubectl rollout restart deployment payments-depl

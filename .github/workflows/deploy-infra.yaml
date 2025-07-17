@@ -1,0 +1,19 @@
+name: deploy-infra
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'infra/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: digitalocean/action-doctl@v4
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - run: doctl kubernetes cluster kubeconfig save gildedpass
+      - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
