@@ -6,7 +6,7 @@ import { TicketUpdatedListener } from './events/listeners/ticket-updated-listene
 import { ExpirationCompleteListener } from './events/listeners/expiration-complete-listener';
 import { PaymentCreatedListener } from './events/listeners/payment-created-listener';
 
-// A code comment to trigger CI/CD pipeline
+// A code comment to trigger CI/CD pipeline!
 
 const start = async () => {
   if (!process.env.JWT_KEY) {
