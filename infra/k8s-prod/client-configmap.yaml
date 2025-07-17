@@ -4,4 +4,4 @@ metadata:
   name: client-config
 data:
   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: pk_test_51RhCH7PuKVx1Uxkqmk9Wfs8jKcNxmoiYW7zrRN5eDNFCgtD5yKMptHgyG60RQ8dMenPX5xCq8UNn3WRM32E0WtdP00VhIFGkvW
-  NEXT_PUBLIC_BASE_URL: http://www.taseenjunaid.com/
+  NEXT_PUBLIC_BASE_URL: http://www.taseenjunaid.com

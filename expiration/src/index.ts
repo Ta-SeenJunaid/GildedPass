@@ -1,7 +1,7 @@
 import { OrderCreatedListener } from './events/listeners/order-created-listener';
 import { natsWrapper } from './nats-wrapper';
 
-// A code comment to trigger CI/CD pipeline!!
+// A code comment to trigger CI/CD pipeline!!!
 
 const start = async () => {
   if (!process.env.NATS_CLIENT_ID) {
