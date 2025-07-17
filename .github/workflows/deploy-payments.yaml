@@ -18,7 +18,7 @@ jobs:
           DOCKER_PAT: ${{ secrets.DOCKER_PAT }}
       - run: cd payments && docker build -t taseenjunaid/gp-payments .
       - run: docker push taseenjunaid/gp-payments
-      - uses: digitalocean/action-doctl@v4
+      - uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - run: doctl kubernetes cluster kubeconfig save gildedpass

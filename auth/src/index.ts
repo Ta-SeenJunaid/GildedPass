@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { app } from './app';
 
-// A code comment to trigger CI/CD pipeline!
+// A code comment to trigger CI/CD pipeline!!
 
 const start = async () => {
   if (!process.env.JWT_KEY) {
