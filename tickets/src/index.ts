@@ -4,7 +4,7 @@ import { natsWrapper } from './nats-wrapper';
 import { OrderCreatedListener } from './events/listeners/order-created-listener';
 import { OrderCancelledListener } from './events/listeners/order-cancelled-listener';
 
-// A code comment to trigger CI/CD pipeline!!
+// A code comment to trigger CI/CD pipeline!!!
 
 const start = async () => {
   if (!process.env.JWT_KEY) {
